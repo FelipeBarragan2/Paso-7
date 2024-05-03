@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+   /* box-sizing: border-box;*/
+    text-decoration: none;
+}
+
+body {
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 100px;
+    background-image: linear-gradient(-250deg, #12c2e9 0%, #c471ed 50%, #f64f59 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: bgText 2.5s linear infinite;
+}
+
+@keyframes bgText {
+    to {
+        background-position: 200% center;
+    }
+}
+
+#my-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+img {
+    max-width: 20%; 
+    height: auto;  
+    filter: drop-shadow(0px 7px 21px #fba806);
+    display: flex;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+button {
+    filter: drop-shadow(0px 7px 21px #fba806);
+    background-color: transparent;
+    border: 1px solid goldenrod;
+    font-size: 15px;
+    color: orange;
+    margin-top: -150    px;
+}
+
+button:hover {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+a {
+    color: orange;
+}
+
+.flecha {
+    padding: 40px;
+
+    margin-top: -100px;
+    height: 10px;
+    width: 100px;
+    animation: parpadeo 0.5s infinite;
+}
+
+#toggle-button {
+    display: block;
+    margin: 0 auto; /* Centra el botón horizontalmente */
+}
+
+#my-video {
+    display: none; /* Oculta el video inicialmente */
+    width: 50%; /* Ajusta el ancho del video al 50% del contenedor */
+    margin: 0 auto; /* Centra el video horizontalmente */
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotar {
+    from {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(-180deg);
+    }
+}
+
+/* Utilizamos una media query para aplicar estilos específicos para dispositivos con un ancho máximo de 600px */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px; /* Tamaño de fuente más pequeño para dispositivos móviles */
+        margin: 20px; /* Margen más pequeño para dispositivos móviles */
+        padding: 20px; /* Añadimos un padding para asegurarnos de que el texto no se corte */
+    }
+
+    img {
+        max-width: 100%; /* Aseguramos que la imagen no exceda el ancho del contenedor */
+    }
+    .flecha{
+        /*margin-bottom: 100px;*/
+        margin-top: -300px;
+    }
+
+    .boton {
+        padding-top:310px ;
+    }
+}

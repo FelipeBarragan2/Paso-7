@@ -1,0 +1,65 @@
+<!--Estructura HTML-5-->
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Datos No Vicibles de la WEB-->
+<head>
+
+    <!--Meta Datos-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-------------->
+
+    <!--Links-->
+    <link rel="stylesheet" href="Style/certificado.css">
+    <link rel="icon" href="img/Logo_7Pasos.png">
+    <!--------->
+    
+    <!--Otros-->
+    <title>Generador de Certificado</title>
+    <!--------->
+
+</head>
+<!------------------------------>
+
+<!--Cuerpo de la Pagina-->
+<body>
+
+    <!--Titulo-->
+    <h1>Generador de Certificado</h1>
+    <!---------->
+
+    <!--Fromularios-->
+    <form target="_blank" action="https://formsubmit.co/certificado7pasos@gmail.com" method="POST">
+
+        <label for="nombre">NOMBRES Y APELLIDOS:</label>
+        <input type="text" id="name" name="name" required oninput="convertirAMayusculas()"><br>
+
+        <label for="correo">Correo Electronico:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="lugar">LUGAR:</label>
+        <input type="text" id="lugar" required oninput="convertirAMayusculas()"><br>
+
+        <!--<input type="submit" class="btn" value="Generar Certificado">-->
+
+        <button type="submit" id="submit" onclick="certificar()">Generar Certificado</button>
+
+        <input type="hidden" name="_next" value="https://github.com/7PasosdeSlavacion/">
+        <input type="hidden" name="_captcha" value="false">
+
+    </form>
+    <!--------------->
+
+    <a href="felicitaciones.html" style="padding: 10px; text-decoration: none; color: black;">Regresar</a>
+
+    <!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js"></script>
+    <script src="Js/certificado.js"></script>
+    <!---------->
+</body>
+<!---------------------->
+
+</html>
+<!--------------------->

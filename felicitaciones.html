@@ -1,0 +1,74 @@
+<!--Estructuta HTML-5-->
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Datos no Vicibles de la WEB-->
+<head>
+
+    <!--Meta Datos-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------->
+
+    <!--Links-->
+    <link rel="stylesheet" href="Style/felicitaciones.css">
+    <link rel="icon" href="img/Logo_7Pasos.png">
+    <!--------->
+
+    <!--Otros-->
+    <title>Felicitaciones</title>
+    <!--------->
+
+</head>
+<!----------------------------->
+
+<!--Cuerpo de la WEB-->
+<body>  
+    <!--Cofeti-->
+    <canvas id="my-canvas"></canvas>
+    <!---------->
+
+    <!--Titulo-->
+    <h1>FELICITACIONES</h1>
+    <!---------->
+
+    <!--Boton Video-->
+    <button id="toggle-button" onclick="alternarVideo()"><ion-icon name="play-circle" style="width: 30px; height: 30px;"></ion-icon></button>
+    <!-------------->
+
+    <!--Logo-->
+    <img src="img/Logo_7Pasos.png" height="400px" style="padding: 10px;" onclick="felipe()">
+    <!-------->
+
+    <!--Video-->
+    <video id="my-video" onended="mostrarBoton()">
+        <source src="Video/Septimo_Paso.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+    <!--------->
+
+    <!--Indicador-->
+    <div class="flecha" id="flecha">
+        <img src="img/Oprimir_Orange.png" alt="" height="40px" style="margin-right: 525px; margin: -10px;">
+    </div>
+    <!------------>
+
+    <!--Botones-->
+    <div class="boton">
+        <button onclick="salir()">Salir</button>
+        <button onclick="inicio()">Inicio</button>
+        <button onclick="descargar()">Crear Certificado</button>
+    </div>
+    <!----------->
+
+    <!--Scripts-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="Js/index.min.js"></script>
+    <script src="Js/scripts.js"></script>
+    <!----------->
+
+</body>
+<!-------------------->
+
+</html>
+<!-------------------->

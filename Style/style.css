@@ -1,0 +1,183 @@
+* {
+    transition: all 0.5s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0px 7px 21px #fba806);
+    cursor: pointer;
+}
+
+body {
+    background-color: #352e7d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.encabezado {
+    background-color: white;
+    flex: 1;
+    padding: 20px;
+    max-width: 100%;
+    text-align: center;
+    /* Centramos el texto y los botones */
+
+}
+
+.pregunta {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.pregunta2 {
+    font-size: 15px;
+    color: white;
+}
+
+.texto {
+    flex: 1;
+    padding: 20px;
+    margin: 20px;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    display: contents;
+    /* Centramos el texto */
+
+}
+
+.btn {
+    background: white;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    max-width: 100%;
+}
+
+.btn:hover {
+    background: orange;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.titulo_b {
+    color: white;
+    font-size: 20px;
+}
+
+.titulo_b:hover {
+    color: orange;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.info_b {
+    padding: 15px;
+    font-size: 30px;
+    color: white;
+}
+
+.otros {
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    width: 200px;
+    height: 18px;
+}
+
+.otros:hover {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.flecha {
+    margin-right: 360px;
+    animation: parpadeo 1s infinite;
+}
+
+.btns {
+    text-align: center;
+    justify-content: center;
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Media Query para dispositivos con un ancho máximo de 600px (dispositivos móviles) */
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 10px;
+    }
+
+    .pregunta {
+        font-size: 15px;
+    }
+
+    .texto {
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .texto .btn{
+        font-size: 15px;
+         max-width: 100%;
+         width: 300px;
+    }
+
+    .btns{
+        align-items: center;
+        text-align: center;
+    }
+
+    .encabezado .btn {
+        text-align: center;
+        /* Centramos los botones en modo móvil */
+    }
+
+    .flecha {
+        /* margin-right: 300px;*/
+        padding-left: 80px;
+        margin-bottom: 20px;
+        animation: parpadeo 1s infinite;
+    }
+
+    .texto div{
+        font-size: 17px;
+    }
+}
